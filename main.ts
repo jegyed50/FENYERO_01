@@ -1,6 +1,6 @@
 input.onButtonPressed(Button.A, function () {
     if (AktuálisFényerő > 1) {
-        AktuálisFényerő = AktuálisFényerő - 1
+        AktuálisFényerő = AktuálisFényerő - 10
         led.setBrightness(AktuálisFényerő)
     } else {
         AktuálisFényerő = 255
@@ -9,7 +9,7 @@ input.onButtonPressed(Button.A, function () {
 })
 input.onButtonPressed(Button.B, function () {
     if (AktuálisFényerő < 255) {
-        AktuálisFényerő = AktuálisFényerő + 1
+        AktuálisFényerő = AktuálisFényerő + 10
         led.setBrightness(AktuálisFényerő)
     } else {
         AktuálisFényerő = 1
@@ -17,6 +17,8 @@ input.onButtonPressed(Button.B, function () {
     }
 })
 let AktuálisFényerő = 0
+AktuálisFényerő = 10
+led.setBrightness(AktuálisFényerő)
 basic.showLeds(`
     # . . . #
     . . . . .
@@ -24,8 +26,6 @@ basic.showLeds(`
     . . . . .
     # . . . #
     `)
-AktuálisFényerő = 1
-led.setBrightness(AktuálisFényerő)
 basic.forever(function () {
 	
 })
