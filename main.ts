@@ -17,7 +17,6 @@ input.onButtonPressed(Button.B, function () {
     }
 })
 let AktuálisFényerő = 0
-AktuálisFényerő = 1
 basic.showLeds(`
     # . . . #
     . . . . .
@@ -25,6 +24,8 @@ basic.showLeds(`
     . . . . .
     # . . . #
     `)
+AktuálisFényerő = 1
+led.setBrightness(AktuálisFényerő)
 basic.forever(function () {
 	
 })
